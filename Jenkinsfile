@@ -21,15 +21,18 @@ pipeline {
             }
         }
         stage('code security') {
+            when {
+                expression { env.BRANCH_NAME == "main" }
+            }
             steps {
                 echo 'we go there'
             }
         }
         stage('Release') {
+            when {
+                expression { env.TAG_NAME ==~ ".*" }
+            }
             steps {
-                when {
-                    expression { env.TAG_NAME ==~ ".*" }
-                }
                 echo 'Hello World'
             }
         }
