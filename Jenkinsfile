@@ -9,10 +9,14 @@ node {
         branches: [[name: branch_name]],
         userRemoteConfigs: [[url: "https://github.com/hemanthtadikonda/cart"]]
     )
-    parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-    }
+    properties([
+        parameters([
+            [$class     : 'ChoiceParameterDefinition',
+             name       : 'SONAR PASSWORD',
+             description: "Eenter your password"
+            ],
+        ]),
+    ])
 
    stage('compile code') {
       print 'ok'
