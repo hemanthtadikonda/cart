@@ -12,7 +12,7 @@ node {
     properties([
         parameters([
             [$class     : 'PasswordParameterDefinition',
-             name       : 'SONAR PASSWORD',
+             name       : 'SONARPASSWORD',
              description: "Enter your password"
             ],
         ]),
@@ -21,7 +21,7 @@ node {
    stage('compile code') {
       print 'ok'
       sh "echo ${params.PERSON}"
-      sh "echo ${SONAR PASSWORD}"
+      sh "echo ${params.SONARPASSWORD}"
       // sh 'compile code depends on code type'
    }
 
