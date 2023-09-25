@@ -6,8 +6,8 @@ node {
 
    stage('compile code') {
       print 'ok'
-      sh "${params.PERSON}"'
-      sh "${params.PASSWORD}"'
+      sh "${params.PERSON}"
+      sh "${params.PASSWORD}"
       // sh 'compile code depends on code type'
    }
 
