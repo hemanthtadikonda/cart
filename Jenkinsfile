@@ -23,8 +23,8 @@ node {
       }
    }
    if  (env.TAG_NAME ==~ ".*") {
-      stage('code security') {
-         print 'Ok'
+      stage('Release') {
+         print 'Ok-OK'
          // sh 'nexus upload command'
       }
    }
