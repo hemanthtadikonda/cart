@@ -21,7 +21,7 @@ node {
    stage('compile code') {
       print 'ok'
       sh "echo ${params.PERSON}"
-      sh "echo ${params.PASSWORD}"
+      sh "echo ${SONAR PASSWORD}"
       // sh 'compile code depends on code type'
    }
 
