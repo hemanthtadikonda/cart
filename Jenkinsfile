@@ -1,7 +1,13 @@
 node {
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    }
 
    stage('compile code') {
       print 'ok'
+      sh 'echo "Hello ${params.PERSON}"'
+      sh 'echo "Password: ${params.PASSWORD}"'
       // sh 'compile code depends on code type'
    }
 
