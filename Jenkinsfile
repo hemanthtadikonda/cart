@@ -13,7 +13,7 @@ node {
         parameters([
             [$class     : 'ChoiceParameterDefinition',
              name       : 'SONAR PASSWORD',
-             description: "Eenter your password"
+             description: "Enter your password"
             ],
         ]),
     ])
