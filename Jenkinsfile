@@ -10,7 +10,7 @@ node {
          print 'Ok'
       }
    }
-   if (env.BRANCH_NAME == "main" || env.TAG_NAME == null) {
+   if (env.BRANCH_NAME == "main" ) {
       stage('code Quality') {
          print 'Ok'
          // sh 'sonar command'
