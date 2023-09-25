@@ -5,7 +5,6 @@ node {
       // sh 'compile code depends on code type'
    }
 
-   }
    if (env.BRANCH_NAME ==~ ".*" || env.TAG_NAME == null) {
       stage('test code') {
          print 'Ok'
