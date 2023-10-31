@@ -1,0 +1,7 @@
+component: cart
+env: dev
+service_type: ClusterIP
+port: 8080
+schema:
+  enabled: false
+PARAMETERS: cart.dev.REDIS_HOST,REDIS_HOST cart.dev.CATALOGUE_HOST,CATALOGUE_HOST cart.dev.CATALOGUE_PORT,CATALOGUE_PORT
