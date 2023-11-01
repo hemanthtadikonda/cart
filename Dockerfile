@@ -5,4 +5,4 @@ COPY       node_modules/ /app/node_modules
 COPY       package.json /app/package.json
 COPY       server.js /app/server.js
 COPY       run.sh /app/run.sh
-ENTRYPOINT [ ]
+ENTRYPOINT [ "bash", "/app/run.sh" ]
